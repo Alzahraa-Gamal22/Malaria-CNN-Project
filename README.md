@@ -1,27 +1,55 @@
 # Malaria Detection Project 
-## Malaria Detection using CNN 
-This project focuses on building a Convolutional Neural Network (CNN) to automate the process of detecting malaria parasites in thin blood smear images.
+
+# Malaria Detection using Convolutional Neural Networks
+#### This project implements a Deep Learning model to classify cell images into two categories: Parasitized and Uninfected. The goal is to provide an automated and reliable method for malaria diagnosis using blood smear images.
 
 ### Project Overview
-Goal: Classify cell images into two categories: Parasitized or Uninfected.
+The model is built using TensorFlow and Keras, leveraging a Sequential CNN architecture. It processes images of size 128x128 pixels to detect patterns associated with malaria infection.
 
-Model: Deep Learning model using CNN architecture.
+### Model Architecture
+The network consists of several layers designed to extract features and classify the images accurately:
 
-Frameworks: Python, TensorFlow/Keras, and Pandas.
+Convolutional Layers: Four Conv2D layers with increasing filters (32, 64, 128, 256) using ReLU activation.
 
-### Techniques to Improve Performance
-Since this model aims for high accuracy in medical diagnosis, I implemented several techniques to handle common issues like Overfitting:
+Normalization: BatchNormalization is applied after each convolutional layer to stabilize training and improve convergence.
 
-Data Augmentation: To increase the variety of training images.
+Pooling: MaxPooling2D layers are used to reduce spatial dimensions and computational load.
 
-Dropout Layers: To prevent the model from over-relying on specific neurons.
+Fully Connected Layers: Two Dense layers (256 and 128 neurons) with ReLU activation.
 
-Early Stopping: To stop training when the validation loss stops improving.
+Regularization: Dropout layers (0.5 and 0.3) are integrated to prevent overfitting and improve generalization.
+
+Output Layer: A single neuron with Sigmoid activation for binary classification.
+
+Overfitting Mitigation
+To ensure the model performs well on unseen data, the following strategies were implemented:
+
+Dropout: Randomly deactivating neurons during training to reduce dependency on specific paths.
+
+Batch Normalization: Helping the model generalize better by normalizing the inputs to each layer.
+
+Validation Split: 20% of the data was reserved for validation to monitor performance and detect overfitting early.
+
+### Requirements and Setup
+To run this project, the following libraries are required:
+
+TensorFlow
+
+NumPy
+
+Matplotlib
+
+Kagglehub (for dataset download)
+
+Training Configuration
+Optimizer: Adam.
+
 
 ### Dataset
-The dataset used contains thousands of cell images. Due to its size, it is not included in this repository. You can find the dataset [https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria/data].
+The dataset used contains thousands of cell images. Due to its size, it is not included in this repository. You can find the dataset [https://www.kaggle.com/code/alzahraagamalafify/malaria-project/edit]
 
+Loss Function: Binary Crossentropy.
 
-Bash
-pip install tensorflow pandas matplotlib scikit-learn
-Run the Jupyter Notebook: Malaria_Project.ipynb.
+Metrics: Accuracy.
+
+Batch Size: 16 for training, 1 for testing.ia_Project.ipynb.
