@@ -9,6 +9,8 @@ The model is built using TensorFlow and Keras, leveraging a Sequential CNN archi
 ### Model Architecture
 The network consists of several layers designed to extract features and classify the images accurately:
 
+
+
 Convolutional Layers: Four Conv2D layers with increasing filters (32, 64, 128, 256) using ReLU activation.
 
 Normalization: BatchNormalization is applied after each convolutional layer to stabilize training and improve convergence.
@@ -41,15 +43,17 @@ Matplotlib
 
 Kagglehub (for dataset download)
 
-Training Configuration
+### Training Configuration
 Optimizer: Adam.
-
-
-### Dataset
-The dataset used contains thousands of cell images. Due to its size, it is not included in this repository. You can find the dataset [https://www.kaggle.com/code/alzahraagamalafify/malaria-project/edit]
 
 Loss Function: Binary Crossentropy.
 
 Metrics: Accuracy.
 
 Batch Size: 16 for training, 1 for testing.ia_Project.ipynb.
+
+
+### Dataset
+The dataset used contains thousands of cell images. Due to its size, it is not included in this repository. You can find the dataset [https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria/data]
+
+
