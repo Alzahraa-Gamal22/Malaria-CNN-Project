@@ -50,7 +50,7 @@ Loss Function: Binary Crossentropy.
 
 Metrics: Accuracy.
 
-Batch Size: 16 for training, 1 for testing.ia_Project.ipynb.
+Batch Size: 16 for training, 1 for testing.
 
 
 ### Dataset
